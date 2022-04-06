@@ -6,11 +6,22 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 12:50:48 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/05 12:52:00 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/07 00:28:25 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
+
+void	put_str_mlx(void *m, void *w, int h, char *str)
+{
+	int		white;
+
+	white = 0xFFFFFF;
+	mlx_string_put(m, w, 10, 20, white, str);
+	mlx_string_put(m, w, 10, h - 10, white, "z: zoom in, x: zoom out, "
+		"arrow: move, space: reset, c: change color");
+	mlx_string_put(m, w, 10, h - 20, white, "esc: exit, scroll wheel: zoom");
+}
 
 static int	frac_type(char *frac)
 {
@@ -23,8 +34,8 @@ void	frac_plot(t_fract mlx)
 {
 	double	x;
 	double	y;
-	int	pixel;
-	int	type;
+	int		pixel;
+	int		type;
 
 	y = 0;
 	type = frac_type(mlx.frac);
