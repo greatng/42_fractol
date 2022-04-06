@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 23:57:36 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/05 13:10:04 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/06 21:56:05 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,6 @@
 # include "../mlx/mlx.h"
 # include "../libft/libft.h"
 
-
-#define X_EVENT_KEY_PRESS
-
 # define KEY_ESC		53
 # define KEY_Q			12
 # define KEY_W			13
@@ -30,7 +27,14 @@
 # define KEY_A			0
 # define KEY_S			1
 # define KEY_D			2
+# define KEY_C			8
 # define KEY_Z			6
+# define KEY_X			7
+# define KEY_LEFT		123
+# define KEY_RIGHT		124
+# define KEY_UP			126
+# define KEY_DOWN		125
+# define KEY_SPACE		49
 
 typedef struct	s_fract
 {
@@ -47,13 +51,20 @@ typedef struct	s_fract
 	char	*buffer;
 	char	frac[20];
 	double	zoom;
+	double	pos_x;
+	double	pos_y;
 }	t_fract;
 
 void	frac_plot(t_fract mlx);
+void	reset_pos_z(t_fract *mlx);
+void	put_str_mlx(void *m, void *w, int h, char *str);
 int	mandelbrot(t_fract mlx, double x, double y);
+int	julia(t_fract mlx, double x, double y);
 int	keyhook(int keycode, t_fract *mlx);
 int	frac_shape_color(t_fract mlx, double x, double y, int type);
-double	x_scale(t_fract mlx, double *x);
-double	y_scale(t_fract mlx, double *s);
+int	close_win(t_fract *mlx);
+int	main_loop(t_fract *mlx);
+double	x_scale(t_fract mlx, double x);
+double	y_scale(t_fract mlx, double s);
 
 #endif

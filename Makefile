@@ -1,34 +1,59 @@
-NAME		=	fractol
+NAME			=	fractol
+LEAKS			=	-fsanitize=address -fno-omit-frame-pointer
+CC			=	gcc
+CFLAGS			=	-Wall -Wextra -Werror
+RM			=	rm -rf
 
-SRC_DIR		=	./srcs/
-SRC		=	frac_plot fractol mandelbrot frac_hook frac_color frac_scale
-SRCS		=	$(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC)))
+SRC_DIR			=	srcs/
+SRC			=	frac_plot fractol mandelbrot julia frac_hook frac_color frac_scale
+SRCS 			=	$(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC)))
+
+OBJ_DIR			=	objs/
+OBJ			=	$(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC)))
+
+ARCH			=	arch -x86_64
+MLX			=	-Lmlx -lmlx -framework OpenGL -framework Appkit
 
 LIBFT_PATH		=	./libft
 LIBFT			=	$(LIBFT_PATH)/libft.a
 
+GREEN = \033[38;5;2m
+NORMAL = \033[38;5;255m
+RED = \033[38;5;1m
+BLUE = \033[38;5;4m
 
-CC		=	gcc
 
-CFLAG		=	-Wall -Wextra -Werror
-ARCH		=	arch -x86_64
-MLX		=	-Lmlx -lmlx -framework OpenGL -framework Appkit
+all:				$(NAME)
 
-all :			$(NAME)
-			@${ARCH} ${CC} ${MLX} ${SRCS} ${LIBFT} ./mlx/libmlx.a -o ${NAME}
-			@echo "Fract-ol compile completed"
+$(NAME):			$(LIBFT) $(OBJ) 
+					@echo "$(GREEN)Compiling:$(NORMAL)"
+					$(ARCH) $(CC) $(MLX) $(LIBFT) $(OBJ) $< -o $(NAME)
 
-$(NAME):			$(LIBFT)
-
+$(OBJ_DIR)%.o:			$(SRC_DIR)%.c
+					@mkdir -p $(OBJ_DIR)
+					@echo "$(GREEN)Compiling:$(NORMAL)"
+					$(ARCH) $(CC) -c $< -o $@ 			
+					
 $(LIBFT):
-			make -C $(LIBFT_PATH) all
+					@make -C $(LIBFT_PATH) all
+
+leaks:				$(LIBFT) $(OBJ) 
+					@echo "$(GREEN)Compiling:$(NORMAL)"
+					$(ARCH) $(CC) $(LEAKS) $(MLX) $(LIBFT) $(OBJ) $< -o $(NAME)
 
 clean:
-				@make -C $(LIBFT_PATH) clean
-				$(RM) $(NAME)
+					@make -C $(LIBFT_PATH) clean
+					@$(RM) $(NAME)
+fclean:				clean
+					@make -C $(LIBFT_PATH) fclean
+					@$(RM) -rf $(NAME) $(OBJ) $(OBJ_DIR)
 
-pig :
-			@echo "                    *                                             .                       \n\
+re:					fclean all
+
+.PHONY:				all clean fclean re
+
+pig:				
+					@echo "                    *                                             .                       \n\
                                                                                           \n\
                        °oO#@@@@@@@@#*   ..°°°°°°.  *@@@@@@@@@#O*.                         \n\
                    O@@@@@@@@@@@@@@@@@  @@@@@@@@@@  @@@@@@@@@@@@@@@@o.                     \n\
@@ -67,4 +92,5 @@ pig :
                         @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  @@##o°               \n\
                         O@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@o                       \n\
                       °  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#                        \n\
-                          @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@      °                  \n"
+                          @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@      °                  \n\
+					pipex compile completed"

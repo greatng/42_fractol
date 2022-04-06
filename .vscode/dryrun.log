@@ -1,6 +1,5 @@
 make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/greatng/42Bangkok/42cursus/fractol'
-arch -x86_64 gcc -Lmlx -lmlx -framework OpenGL -framework Appkit ./srcs/frac_plot.c ./srcs/fractol.c ./srcs/mandelbrot.c ./srcs/frac_hook.c ./srcs/frac_color.c ./srcs/frac_scale.c ./libft/libft.a ./mlx/libmlx.a -o fractol
-echo "Fract-ol compile completed"
+make: Nothing to be done for `all'.
 make: Leaving directory `/Users/greatng/42Bangkok/42cursus/fractol'
  
