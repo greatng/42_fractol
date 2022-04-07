@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   frac_hook.c                                        :+:      :+:    :+:   */
+/*   frac_hook1.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 11:25:06 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/06 23:56:39 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/07 13:02:48 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,8 @@ int	keyhook(int keycode, t_fract *mlx)
 	else if (keycode == KEY_SPACE)
 		reset_pos_z(mlx);
 	else if (keycode == KEY_C)
-		mlx->color += 1;
+		mlx->julia += 1;
 	return (0);
-}
-
-int	close_win(t_fract *mlx)
-{
-	exit(0);
 }
 
 int	main_loop(t_fract *mlx)
@@ -53,5 +48,4 @@ void	reset_pos_z(t_fract *mlx)
 	mlx->zoom = 1;
 	mlx->pos_x = 2;
 	mlx->pos_y = 2;
-	mlx->color = 0;
 }

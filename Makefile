@@ -5,7 +5,9 @@ CFLAGS			=	-Wall -Wextra -Werror
 RM			=	rm -rf
 
 SRC_DIR			=	srcs/
-SRC			=	frac_plot fractol mandelbrot julia frac_hook frac_color frac_scale
+SRC			=	frac_plot fractol mandelbrot julia frac_hook1 frac_color \
+					frac_scale frac_exit
+
 SRCS 			=	$(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC)))
 
 OBJ_DIR			=	objs/

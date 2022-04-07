@@ -6,11 +6,49 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 21:08:53 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/07 00:05:33 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/07 18:25:13 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
+
+static double	julia_x(t_fract mlx)
+{
+	int	type;
+
+	type = mlx.julia % 6;
+	if (type == 0)
+		return (-0.4);
+	else if (type == 1)
+		return (0.285);
+	else if (type == 2)
+		return (-0.70176);
+	else if (type == 3)
+		return (-0.835);
+	else if (type == 4)
+		return (-0.8);
+	else
+		return (-0.7269);
+}
+
+static double	julia_y(t_fract mlx)
+{
+	int	type;
+
+	type = mlx.julia % 6;
+	if (type == 0)
+		return (0.6);
+	else if (type == 1)
+		return (0.01);
+	else if (type == 2)
+		return (-0.3842);
+	else if (type == 3)
+		return (-0.2321);
+	else if (type == 4)
+		return (0.156);
+	else
+		return (0.1889);
+}
 
 int	julia(t_fract mlx, double x, double y)
 {
@@ -18,12 +56,12 @@ int	julia(t_fract mlx, double x, double y)
 	double	y0;
 	double	x2;
 	double	y2;
-	int		i;
+	static int		i;
 
-	x = x_scale(mlx, x);
-	y = y_scale(mlx, y);
-	x0 = -0.4;
-	y0 = 0.6;
+	x = 0.8 * x_scale(mlx, x);
+	y = 0.8 * y_scale(mlx, y);
+	x0 = julia_x(mlx);
+	y0 = julia_y(mlx);
 	i = 0;
 	x2 = pow(x, 2);
 	y2 = pow(y, 2);

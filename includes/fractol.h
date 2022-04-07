@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 23:57:36 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/06 21:56:05 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/07 18:25:33 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,17 +43,26 @@ typedef struct	s_fract
 	void	*image;
 	int	width;
 	int	height;
-	int	color;
 	int	p_color;
 	int	pixelb;
 	int	lineb;
 	int	endian;
+	int	julia;
+	int	type;
 	char	*buffer;
 	char	frac[20];
 	double	zoom;
 	double	pos_x;
 	double	pos_y;
 }	t_fract;
+
+typedef struct	s_color
+{
+	int	a;
+	int	r;
+	int	g;
+	int	b;
+}	t_color;
 
 void	frac_plot(t_fract mlx);
 void	reset_pos_z(t_fract *mlx);
