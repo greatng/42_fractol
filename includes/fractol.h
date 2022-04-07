@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 23:57:36 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/07 22:42:41 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/08 00:37:15 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ typedef struct	s_color
 void	frac_plot(t_fract mlx);
 void	reset_pos_z(t_fract *mlx);
 void	put_str_mlx(void *m, void *w, int h, char *str);
+int	burningship(t_fract mlx, double x, double y);
 int	mandelbrot(t_fract mlx, double x, double y);
 int	julia(t_fract mlx, double x, double y);
 int	keyhook(int keycode, t_fract *mlx);

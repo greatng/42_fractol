@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 23:32:43 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/08 00:26:28 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/08 00:36:44 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,6 @@ int	frac_shape_color(t_fract mlx, double x, double y, int type)
 	if (type == 2)
 		iter = julia(mlx, x, y);
 	else if (type == 1)
-		iter = mandelbrot(mlx, x, y);
+		iter = burningship(mlx, x, y);
 	return (get_color(iter, type, mlx.color));
 }

@@ -1,5 +1,6 @@
 make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/greatng/42Bangkok/42cursus/fractol'
-make: Nothing to be done for `all'.
+echo "\033[38;5;2mCompiling:\033[38;5;255m"
+arch -x86_64 gcc -Lmlx -lmlx -framework OpenGL -framework Appkit ./libft/libft.a objs/frac_plot.o objs/fractol.o objs/mandelbrot.o objs/julia.o objs/burningship.o objs/frac_hook1.o objs/frac_color.o objs/frac_scale.o objs/frac_exit.o libft/libft.a -o fractol
 make: Leaving directory `/Users/greatng/42Bangkok/42cursus/fractol'
  
