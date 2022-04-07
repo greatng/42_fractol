@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 23:57:36 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/07 18:25:33 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/07 22:42:41 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ typedef struct	s_fract
 	int	width;
 	int	height;
 	int	p_color;
+	int	color;
 	int	pixelb;
 	int	lineb;
 	int	endian;

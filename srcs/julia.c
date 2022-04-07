@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 21:08:53 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/07 18:25:13 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/08 00:08:51 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,14 @@ static double	julia_y(t_fract mlx)
 
 int	julia(t_fract mlx, double x, double y)
 {
-	double	x0;
-	double	y0;
-	double	x2;
-	double	y2;
-	static int		i;
+	double		x0;
+	double		y0;
+	double		x2;
+	double		y2;
+	static int	i;
 
+	if ((int)(x + y) % 2)
+		return (i / 1.8);
 	x = 0.8 * x_scale(mlx, x);
 	y = 0.8 * y_scale(mlx, y);
 	x0 = julia_x(mlx);

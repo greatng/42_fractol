@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 23:53:04 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/07 18:28:06 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/08 00:16:27 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 static t_fract	fractol_init(void)
 {
 	t_fract	mlx;
-	
-	mlx.width = 400;
-	mlx.height = 400;
+
+	mlx.width = 500;
+	mlx.height = 500;
 	mlx.mlx = mlx_init();
 	if (!mlx.mlx)
 		exit(1);
@@ -25,13 +25,14 @@ static t_fract	fractol_init(void)
 	mlx.image = mlx_new_image(mlx.mlx, mlx.width, mlx.height);
 	if (!mlx.image || !mlx.win)
 		exit(1);
-	mlx.buffer = mlx_get_data_addr(mlx.image, &mlx.pixelb, 
-		&mlx.lineb, &mlx.endian);
+	mlx.buffer = mlx_get_data_addr(mlx.image, &mlx.pixelb,
+			&mlx.lineb, &mlx.endian);
 	if (!mlx.buffer)
 		exit(1);
 	mlx.zoom = 1;
 	mlx.pos_x = 2;
 	mlx.pos_y = 2;
+	mlx.color = 0;
 	return (mlx);
 }
 

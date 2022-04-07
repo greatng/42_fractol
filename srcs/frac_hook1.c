@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 11:25:06 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/07 13:02:48 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/07 23:02:59 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ int	keyhook(int keycode, t_fract *mlx)
 		reset_pos_z(mlx);
 	else if (keycode == KEY_C)
 		mlx->julia += 1;
+	else if (keycode == KEY_A)
+		mlx->color += 1;
 	return (0);
 }
 

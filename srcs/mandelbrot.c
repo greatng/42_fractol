@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 10:43:01 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/07 22:24:47 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/08 00:08:47 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,14 @@ int	log_color(int i, double x2, double y2)
 
 int	mandelbrot(t_fract mlx, double x, double y)
 {
-	double	x0;
-	double	y0;
-	double	x2;
-	double	y2;
-	static int		i;
+	double		x0;
+	double		y0;
+	double		x2;
+	double		y2;
+	static int	i;
 
 	if ((int)(x + y) % 2)
-		return (i / 2);
+		return (i / 1.8);
 	x0 = x_scale(mlx, x);
 	y0 = y_scale(mlx, y);
 	i = 0;
