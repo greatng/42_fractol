@@ -6,29 +6,13 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 10:43:01 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/08 00:47:59 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/11 10:43:25 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/fractol.h"
 
-static int	log_color(int i, double x2, double y2)
-{
-	double	log_zn;
-	double	n;
-
-	if (i < 256)
-	{
-		log_zn = log(x2 + y2) / 2.0f;
-		n = log(log_zn / log(2)) / log(2);
-		i = i + 1 - n;
-	}
-	if (i < 0)
-		i = 0;
-	return (i);
-}
-
-int	burningship(t_fract mlx, double x, double y)
+int	burningship(t_fract m, double x, double y)
 {
 	double		x0;
 	double		y0;
@@ -38,20 +22,19 @@ int	burningship(t_fract mlx, double x, double y)
 
 	if ((int)(x + y) % 2)
 		return (i / 1.8);
-	x0 = x_scale(mlx, x);
-	y0 = y_scale(mlx, y);
+	x0 = x_scale(m, x) - 0.5;
+	y0 = y_scale(m, y);
 	i = 0;
 	x = x0;
 	y = y0;
-	x2 = 0;
-	y2 = 0;
-	while (x2 + y2 <= 4 && ++i < 256)
+	x2 = pow(x, 2);
+	y2 = pow(y, 2);
+	while (x2 + y2 < 4 && ++i < 64)
 	{
-		y = fabs(y * x);
-		y = 2 * y + y0;
+		y = fabs(2 * y * x) + y0;
 		x = x2 - y2 + x0;
 		x2 = pow(x, 2);
 		y2 = pow(y, 2);
 	}
-	return (log_color(i, x2, y2));
+	return (i);
 }

@@ -4,6 +4,10 @@ CC			=	gcc
 CFLAGS			=	-Wall -Wextra -Werror
 RM			=	rm -rf
 
+HEADER_DIR		=	includes/
+HEADER			=	fractol
+HEADERS			=	$(addprefix $(HEADER_DIR), $(addsuffix .h, $(HEADER)))
+
 SRC_DIR			=	srcs/
 SRC			=	frac_plot fractol mandelbrot julia burningship frac_hook1 \
 					frac_color frac_scale frac_exit
@@ -27,11 +31,11 @@ BLUE = \033[38;5;4m
 
 all:				$(NAME)
 
-$(NAME):			$(LIBFT) $(OBJ) 
+$(NAME):			$(LIBFT) $(OBJ)
 					@echo "$(GREEN)Compiling:$(NORMAL)"
 					$(ARCH) $(CC) $(MLX) $(LIBFT) $(OBJ) $< -o $(NAME)
 
-$(OBJ_DIR)%.o:			$(SRC_DIR)%.c
+$(OBJ_DIR)%.o:			$(SRC_DIR)%.c $(HEADERS)
 					@mkdir -p $(OBJ_DIR)
 					@echo "$(GREEN)Compiling:$(NORMAL)"
 					$(ARCH) $(CC) -c $< -o $@ 			

@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 23:32:43 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/08 00:36:44 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/10 21:10:36 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ static int	get_color(int iter, int type, int mode)
 			color[i] = i * pow(2, 18);
 		else if (mode % 4 == 2)
 			color[i] = i * pow(2, 9);
-		else if (mode % 4 == 3 || (i >= 190 && type != 1))
+		else if (mode % 4 == 3 || (i >= 190 && type == 2))
 			color[i] = i * 65793;
-		else if (type == 1)
+		else if (type == 3)
 			color[i] = i * pow(2, 3);
 		else if (i < 85)
 			color[i] = i * 3 + 1;
@@ -40,13 +40,15 @@ static int	get_color(int iter, int type, int mode)
 	return ((int)color[iter]);
 }
 
-int	frac_shape_color(t_fract mlx, double x, double y, int type)
+int	frac_shape_color(t_fract m, double x, double y, int type)
 {
 	int			iter;
 
 	if (type == 2)
-		iter = julia(mlx, x, y);
+		iter = julia(m, x, y);
 	else if (type == 1)
-		iter = burningship(mlx, x, y);
-	return (get_color(iter, type, mlx.color));
+		iter = mandelbrot(m, x, y);
+	else if (type == 3)
+		iter = burningship(m, x, y);
+	return (get_color(iter, type, m.color));
 }

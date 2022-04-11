@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 23:53:04 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/08 00:16:27 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/11 15:05:25 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,49 +14,52 @@
 
 static t_fract	fractol_init(void)
 {
-	t_fract	mlx;
+	t_fract	m;
 
-	mlx.width = 500;
-	mlx.height = 500;
-	mlx.mlx = mlx_init();
-	if (!mlx.mlx)
+	m.mlx = mlx_init();
+	if (!m.mlx)
 		exit(1);
-	mlx.win = mlx_new_window(mlx.mlx, mlx.width, mlx.height, "Frac_u");
-	mlx.image = mlx_new_image(mlx.mlx, mlx.width, mlx.height);
-	if (!mlx.image || !mlx.win)
+	m.win = mlx_new_window(m.mlx, WIDTH, HEIGHT, "Frac_u");
+	m.image = mlx_new_image(m.mlx, WIDTH, HEIGHT);
+	if (!m.image || !m.win)
 		exit(1);
-	mlx.buffer = mlx_get_data_addr(mlx.image, &mlx.pixelb,
-			&mlx.lineb, &mlx.endian);
-	if (!mlx.buffer)
+	m.buffer = mlx_get_data_addr(m.image, &m.win_mem.pixelb,
+			&m.win_mem.lineb, &m.win_mem.endian);
+	if (!m.buffer)
 		exit(1);
-	mlx.zoom = 1;
-	mlx.pos_x = 2;
-	mlx.pos_y = 2;
-	mlx.color = 0;
-	return (mlx);
+	m.zoom = SCALE;
+	m.x_o = WIDTH / 2;
+	m.y_o = HEIGHT / 2;
+	m.color = 0;
+	return (m);
 }
 
 static void	frac_u(void)
 {
 	ft_printf("How to use :\n> ./fractol {fractol name}\n");
-	ft_printf("1 : mandelbrot\n2 : julia {1 - 6}\n");
+	ft_printf("1 : mandelbrot\n2 : julia {1 - 6}\n3 : burningship\n");
 	ft_printf("ex : ./fractol julia 6\n");
 	exit (1);
 }
 
-static void	arg_check(int argc, char **argv, t_fract *mlx)
+static void	arg_check(int argc, char **argv, t_fract *m)
 {
 	if (argc == 1 || argc > 3)
 		frac_u();
-	if (!ft_strncmp(argv[1], "mandelbrot", 11))
+	if (!ft_strncmp(argv[1], "mandelbrot", 11) && argc == 2)
 	{
-		ft_strlcpy(mlx->frac, "fractol : mandelbrot", 21);
-		mlx->type = 1;
+		ft_strlcpy(m->frac, "fractol : mandelbrot", 21);
+		m->type = 1;
 	}
-	else if (!ft_strncmp(argv[1], "julia", 6))
+	else if (!ft_strncmp(argv[1], "julia", 6) && argc == 3)
 	{
-		ft_strlcpy(mlx->frac, "fractol : julia", 16);
-		mlx->type = 2;
+		ft_strlcpy(m->frac, "fractol : julia", 16);
+		m->type = 2;
+	}
+	else if (!ft_strncmp(argv[1], "burningship", 12) && argc == 2)
+	{
+		ft_strlcpy(m->frac, "fractol : burningship", 22);
+		m->type = 3;
 	}
 	else
 		frac_u();
@@ -64,20 +67,21 @@ static void	arg_check(int argc, char **argv, t_fract *mlx)
 
 int	main(int argc, char **argv)
 {
-	t_fract	mlx;
+	t_fract	m;
 
-	mlx = fractol_init();
-	arg_check(argc, argv, &mlx);
-	if (mlx.type == 2)
+	m = fractol_init();
+	arg_check(argc, argv, &m);
+	if (m.type == 2)
 	{
 		if (argc != 3)
 			frac_u();
-		mlx.julia = ft_atoi(argv[2]);
-		if (!(mlx.julia >= 1 && mlx.julia <= 6))
+		m.julia = ft_atoi(argv[2]);
+		if (!(m.julia >= 1 && m.julia <= 6))
 			frac_u();
 	}
-	mlx_key_hook(mlx.win, &keyhook, &mlx);
-	//mlx_mouse_hook(mlx.win, &close_win, &mlx);
-	mlx_loop_hook(mlx.mlx, &main_loop, &mlx);
-	mlx_loop(mlx.mlx);
+	mlx_hook(m.win, KEYPRESS, 0, &keyhook, &m);
+	mlx_hook(m.win, BUTTONPRESS, 0, &mousehook, &m);
+	mlx_hook(m.win, DESTROY_WINDOW, 0, &close_win, &m);
+	mlx_loop_hook(m.mlx, &main_loop, &m);
+	mlx_loop(m.mlx);
 }
