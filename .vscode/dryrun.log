@@ -1,6 +1,35 @@
-make --dry-run --keep-going --print-directory
+make --dry-run --always-make --keep-going --print-directory
 make: Entering directory `/Users/greatng/42Bangkok/42cursus/fractol'
-make: Nothing to be done for `all'.
+make -C ./libft all
+mkdir -p objs/
+echo "\033[38;5;2mCompiling:\033[38;5;255m"
+arch -x86_64 gcc -c srcs/frac_plot.c -o objs/frac_plot.o 			
+mkdir -p objs/
+echo "\033[38;5;2mCompiling:\033[38;5;255m"
+arch -x86_64 gcc -c srcs/fractol.c -o objs/fractol.o 			
+mkdir -p objs/
+echo "\033[38;5;2mCompiling:\033[38;5;255m"
+arch -x86_64 gcc -c srcs/mandelbrot.c -o objs/mandelbrot.o 			
+mkdir -p objs/
+echo "\033[38;5;2mCompiling:\033[38;5;255m"
+arch -x86_64 gcc -c srcs/julia.c -o objs/julia.o 			
+mkdir -p objs/
+echo "\033[38;5;2mCompiling:\033[38;5;255m"
+arch -x86_64 gcc -c srcs/burningship.c -o objs/burningship.o 			
+mkdir -p objs/
+echo "\033[38;5;2mCompiling:\033[38;5;255m"
+arch -x86_64 gcc -c srcs/frac_hook1.c -o objs/frac_hook1.o 			
+mkdir -p objs/
+echo "\033[38;5;2mCompiling:\033[38;5;255m"
+arch -x86_64 gcc -c srcs/frac_color.c -o objs/frac_color.o 			
+mkdir -p objs/
+echo "\033[38;5;2mCompiling:\033[38;5;255m"
+arch -x86_64 gcc -c srcs/frac_scale.c -o objs/frac_scale.o 			
  
+mkdir -p objs/
+echo "\033[38;5;2mCompiling:\033[38;5;255m"
+arch -x86_64 gcc -c srcs/frac_exit.c -o objs/frac_exit.o 			
+echo "\033[38;5;2mCompiling:\033[38;5;255m"
+arch -x86_64 gcc -Lmlx -lmlx -framework OpenGL -framework Appkit ./libft/libft.a objs/frac_plot.o objs/fractol.o objs/mandelbrot.o objs/julia.o objs/burningship.o objs/frac_hook1.o objs/frac_color.o objs/frac_scale.o objs/frac_exit.o libft/libft.a -o fractol
 make: Leaving directory `/Users/greatng/42Bangkok/42cursus/fractol'
  

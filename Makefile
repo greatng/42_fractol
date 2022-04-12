@@ -53,6 +53,7 @@ clean:
 fclean:				clean
 					@make -C $(LIBFT_PATH) fclean
 					@$(RM) -rf $(NAME) $(OBJ) $(OBJ_DIR)
+					@make pig
 
 re:					fclean all
 

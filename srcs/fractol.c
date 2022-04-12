@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 23:53:04 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/11 15:05:25 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/12 22:46:24 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ static t_fract	fractol_init(void)
 	m.x_o = WIDTH / 2;
 	m.y_o = HEIGHT / 2;
 	m.color = 0;
+	m.off.x = 0;
+	m.off.y = 0;
 	return (m);
 }
 

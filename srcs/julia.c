@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 21:08:53 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/11 14:37:15 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/12 22:42:50 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,8 @@ int	julia(t_fract m, double x, double y)
 
 	if ((int)(x + y) % 2)
 		return (i / 1.8);
-	x = x_scale(m, x);
-	y = y_scale(m, y);
+	x = x_scale(&m, x);
+	y = y_scale(&m, y);
 	x0 = julia_x(m);
 	y0 = julia_y(m);
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 10:43:01 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/11 10:43:25 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/12 22:48:46 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ int	burningship(t_fract m, double x, double y)
 
 	if ((int)(x + y) % 2)
 		return (i / 1.8);
-	x0 = x_scale(m, x) - 0.5;
-	y0 = y_scale(m, y);
+	x0 = x_scale(&m, x);
+	y0 = y_scale(&m, y);
 	i = 0;
 	x = x0;
 	y = y0;

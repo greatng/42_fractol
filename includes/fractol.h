@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 23:57:36 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/11 15:05:18 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/12 22:57:48 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,14 @@
 # define WIDTH			500
 # define HEIGHT			500
 // 1 unit = 100 pixel
-# define SCALE			150
+# define SCALE			200
+
+//Offset
+typedef struct s_offset
+{
+	int	x;
+	int	y;
+}	t_offset;
 
 //Image Stuff
 typedef struct	s_win
@@ -59,7 +66,6 @@ typedef struct	s_win
 	int	pixelb;
 	int	lineb;
 	int	endian;
-	int	julia;
 }	t_win;
 
 //Mlx content
@@ -70,7 +76,6 @@ typedef struct	s_fract
 	void	*image;
 	int	p_color;
 	int	color;
-	t_win	win_mem;
 	int	julia;
 	int	type;
 	char	*buffer;
@@ -78,6 +83,8 @@ typedef struct	s_fract
 	double	zoom;
 	double	x_o;
 	double	y_o;
+	t_win		win_mem;
+	t_offset	off;
 }	t_fract;
 
 //Prototypes
@@ -92,7 +99,7 @@ int	mousehook(int mousecode, int x, int y, t_fract *m);
 int	frac_shape_color(t_fract m, double x, double y, int type);
 int	close_win(t_fract *m);
 int	main_loop(t_fract *m);
-double	x_scale(t_fract m, int x);
-double	y_scale(t_fract m, int y);
+double	x_scale(t_fract *m, int x);
+double	y_scale(t_fract *m, int y);
 
 #endif
