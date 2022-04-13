@@ -1,35 +1,34 @@
 make --dry-run --always-make --keep-going --print-directory
 make: Entering directory `/Users/greatng/42Bangkok/42cursus/fractol'
 make -C ./libft all
-mkdir -p objs/
+mkdir -p obj
 echo "\033[38;5;2mCompiling:\033[38;5;255m"
-arch -x86_64 gcc -c srcs/frac_plot.c -o objs/frac_plot.o 			
-mkdir -p objs/
+arch -x86_64 gcc -c src/frac_plot.c -o obj/frac_plot.o 			
+mkdir -p obj
 echo "\033[38;5;2mCompiling:\033[38;5;255m"
-arch -x86_64 gcc -c srcs/fractol.c -o objs/fractol.o 			
-mkdir -p objs/
+arch -x86_64 gcc -c src/fractol.c -o obj/fractol.o 			
+mkdir -p obj
 echo "\033[38;5;2mCompiling:\033[38;5;255m"
-arch -x86_64 gcc -c srcs/mandelbrot.c -o objs/mandelbrot.o 			
-mkdir -p objs/
+arch -x86_64 gcc -c src/mandelbrot.c -o obj/mandelbrot.o 			
+mkdir -p obj
 echo "\033[38;5;2mCompiling:\033[38;5;255m"
-arch -x86_64 gcc -c srcs/julia.c -o objs/julia.o 			
-mkdir -p objs/
+arch -x86_64 gcc -c src/julia.c -o obj/julia.o 			
+mkdir -p obj
 echo "\033[38;5;2mCompiling:\033[38;5;255m"
-arch -x86_64 gcc -c srcs/burningship.c -o objs/burningship.o 			
-mkdir -p objs/
+arch -x86_64 gcc -c src/burningship.c -o obj/burningship.o 			
+mkdir -p obj
 echo "\033[38;5;2mCompiling:\033[38;5;255m"
-arch -x86_64 gcc -c srcs/frac_hook1.c -o objs/frac_hook1.o 			
-mkdir -p objs/
+arch -x86_64 gcc -c src/frac_hook.c -o obj/frac_hook.o 			
+mkdir -p obj
 echo "\033[38;5;2mCompiling:\033[38;5;255m"
-arch -x86_64 gcc -c srcs/frac_color.c -o objs/frac_color.o 			
-mkdir -p objs/
+arch -x86_64 gcc -c src/frac_color.c -o obj/frac_color.o 			
+mkdir -p obj
 echo "\033[38;5;2mCompiling:\033[38;5;255m"
-arch -x86_64 gcc -c srcs/frac_scale.c -o objs/frac_scale.o 			
- 
-mkdir -p objs/
+arch -x86_64 gcc -c src/frac_scale.c -o obj/frac_scale.o 			
+mkdir -p obj
 echo "\033[38;5;2mCompiling:\033[38;5;255m"
-arch -x86_64 gcc -c srcs/frac_exit.c -o objs/frac_exit.o 			
+arch -x86_64 gcc -c src/frac_exit.c -o obj/frac_exit.o 			
 echo "\033[38;5;2mCompiling:\033[38;5;255m"
-arch -x86_64 gcc -Lmlx -lmlx -framework OpenGL -framework Appkit ./libft/libft.a objs/frac_plot.o objs/fractol.o objs/mandelbrot.o objs/julia.o objs/burningship.o objs/frac_hook1.o objs/frac_color.o objs/frac_scale.o objs/frac_exit.o libft/libft.a -o fractol
+arch -x86_64 gcc -Lmlx -lmlx -framework OpenGL -framework Appkit ./libft/libft.a obj/frac_plot.o obj/fractol.o obj/mandelbrot.o obj/julia.o obj/burningship.o obj/frac_hook.o obj/frac_color.o obj/frac_scale.o obj/frac_exit.o libft/libft.a -o fractol
 make: Leaving directory `/Users/greatng/42Bangkok/42cursus/fractol'
  

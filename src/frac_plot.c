@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 12:50:48 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/11 14:20:39 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/13 17:32:44 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,20 @@ void	put_str_mlx(t_fract m, char *str)
 
 	white = 0xFFFFFF;
 	mlx_string_put(m.mlx, m.win, 10, 20, white, str);
-	mlx_string_put(m.mlx, m.win, 10, HEIGHT - 20, white, "esc:"
-		" exit, scroll wheel: zoom");
-	mlx_string_put(m.mlx, m.win, 10, HEIGHT - 10, white, "z: zoom in, x: zoom out, "
-		"arrow: move, space: reset");
+	mlx_string_put(m.mlx, m.win, 10, HEIGHT - 30, white, "esc:\
+		 exit, scroll wheel: zoom");
+	mlx_string_put(m.mlx, m.win, 10, HEIGHT - 20, white, "left mouse: \
+		move to position, right mouse: zoom");
+	mlx_string_put(m.mlx, m.win, 10, HEIGHT - 10, white,\
+		"z: zoom in, x: zoom out, \
+		arrow: move, space: reset");
 }
 
 void	frac_plot(t_fract m)
 {
 	int	x;
 	int	y;
-	int		pixel;
+	int	pixel;
 
 	y = 0;
 	while (y <= HEIGHT)
@@ -36,10 +39,8 @@ void	frac_plot(t_fract m)
 		x = 0;
 		while (x <= WIDTH)
 		{
-			if (x % (WIDTH / 4) == 0 || y % (HEIGHT / 4) == 0)
-				m.p_color = 0x303030;
-			else if (x % (WIDTH / 20) == 0 || 
-				y % (HEIGHT / 20) == 0)
+			if (x % (WIDTH / 20) == 0
+				|| y % (HEIGHT / 20) == 0)
 				m.p_color = 0x101010;
 			else
 				m.p_color = frac_shape_color(m, x, y, m.type);

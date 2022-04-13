@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 10:43:01 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/12 22:47:19 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/13 21:58:54 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,6 @@ int	mandelbrot(t_fract m, double x, double y)
 	double		y2;
 	static int	i;
 
-	if ((int)(x + y) % 2)
-		return (i / 1.8);
 	x0 = x_scale(&m, x);
 	y0 = y_scale(&m, y);
 	i = 0;

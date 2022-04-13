@@ -6,8 +6,9 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
+ 
 
-# Make data base, printed on Tue Apr 12 20:32:38 2022
+# Make data base, printed on Wed Apr 13 10:49:00 2022
 
 # Variables
 
@@ -16,9 +17,9 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # automatic
 ?F = $(notdir $?)
 # makefile (from `Makefile', line 18)
-OBJ = $(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC)))
+OBJ = $(addprefix $(OBJ_DIR)/, $(addsuffix .o, $(SRC)))
 # makefile (from `Makefile', line 12)
-SRC = frac_plot fractol mandelbrot julia burningship frac_hook1 frac_color frac_scale frac_exit
+SRC = frac_plot fractol mandelbrot julia burningship frac_hook frac_color frac_scale frac_exit
 # environment
 VSCODE_LOG_NATIVE = false
 # automatic
@@ -46,7 +47,7 @@ BLUE = \033[38;5;4m
 # makefile (from `Makefile', line 1)
 MAKEFILE_LIST :=  Makefile
 # makefile (from `Makefile', line 17)
-OBJ_DIR = objs/
+OBJ_DIR = obj
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # makefile (from `Makefile', line 2)
@@ -56,7 +57,7 @@ __CFBundleIdentifier = com.microsoft.VSCode
 # environment
 INFOPATH = /opt/homebrew/share/info:
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/ld/sh1sblf11kd9n_lxmzlt97lm0000gn/T/vscode-ipc-181bda1b-a896-4126-8428-190b630d5e47.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/ld/sh1sblf11kd9n_lxmzlt97lm0000gn/T/vscode-ipc-da2292d1-202b-4651-a9c7-35af756ad082.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -64,7 +65,7 @@ PATH = /Users/greatng/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/sbin:/
 # environment
 LSCOLORS = ExGxDxDxCxDxDxFxFxexEx
 # environment
-LaunchInstanceID = 1DF91D03-3B29-4BCA-99C4-36C0E0A6E689
+LaunchInstanceID = 62EB7137-4D67-47A2-86E9-2136EEBE673F
 # environment
 VSCODE_LOG_STACK = false
 # environment
@@ -76,11 +77,11 @@ TERMINFO = /Users/greatng/.terminfo
 # environment
 LS_COLORS = fi=00:mi=00:mh=00:ln=01;36:or=01;31:di=01;34:ow=04;01;34:st=34:tw=04;34:pi=01;33:so=01;33:do=01;33:bd=01;33:cd=01;33:su=01;35:sg=01;35:ca=01;35:ex=01;32
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.IRfZCt4XTn/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.QWnWmciL90/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
-DISPLAY = /private/tmp/com.apple.launchd.AXFnHRmeiW/org.xquartz:0
+DISPLAY = /private/tmp/com.apple.launchd.8AF0cNGdij/org.xquartz:0
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -106,7 +107,7 @@ LOGNAME = greatng
 # environment
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # makefile (from `Makefile', line 9)
-HEADERS = $(addprefix $(HEADER_DIR), $(addsuffix .h, $(HEADER)))
+HEADERS = $(addprefix $(HEADER_DIR)/, $(addsuffix .h, $(HEADER)))
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # makefile (from `Makefile', line 27)
@@ -120,7 +121,7 @@ MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
 # makefile (from `Makefile', line 15)
-SRCS = $(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC)))
+SRCS = $(addprefix $(SRC_DIR)/, $(addsuffix .c, $(SRC)))
 # environment
 SHLVL = 1
 # makefile (from `Makefile', line 24)
@@ -142,7 +143,7 @@ LESS = -iRFXMx4
 # default
 MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
 # makefile (from `Makefile', line 7)
-HEADER_DIR = includes/
+HEADER_DIR = includes
 # default
 .VARIABLES := 
 # environment
@@ -178,7 +179,7 @@ COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
 # makefile (from `Makefile', line 11)
-SRC_DIR = srcs/
+SRC_DIR = src
 # automatic
 <F = $(notdir $<)
 # environment
@@ -206,9 +207,9 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 443
+VSCODE_PID = 422
 # variable set hash-table stats:
-# Load=98/1024=10%, Rehash=0, Collisions=7/140=5%
+# Load=98/1024=10%, Rehash=0, Collisions=8/147=5%
 
 # Pattern-specific Variable Values
 
@@ -216,15 +217,15 @@ VSCODE_PID = 443
 
 # Directories
 
-# . (device 16777231, inode 7338726): 12 files, no impossibilities.
-# includes (device 16777231, inode 7339005): 3 files, no impossibilities so far.
-# srcs (device 16777231, inode 7339035): 11 files, no impossibilities so far.
+# . (device 16777234, inode 7338726): 12 files, no impossibilities.
+# includes (device 16777234, inode 7339005): 3 files, no impossibilities so far.
+# src (device 16777234, inode 7339035): 11 files, no impossibilities so far.
 
 # 26 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
-objs/%.o: srcs/%.c includes/fractol.h
+obj/%.o: src/%.c includes/fractol.h
 #  commands to execute (from `Makefile', line 39):
 	@mkdir -p $(OBJ_DIR)
 	@echo "$(GREEN)Compiling:$(NORMAL)"
@@ -235,84 +236,103 @@ objs/%.o: srcs/%.c includes/fractol.h
 
 # Files
 
-fractol: libft/libft.a objs/frac_plot.o objs/fractol.o objs/mandelbrot.o objs/julia.o objs/burningship.o objs/frac_hook1.o objs/frac_color.o objs/frac_scale.o objs/frac_exit.o
+fractol: libft/libft.a obj/frac_plot.o obj/fractol.o obj/mandelbrot.o obj/julia.o obj/burningship.o obj/frac_hook.o obj/frac_color.o obj/frac_scale.o obj/frac_exit.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-04-12 14:12:58
+#  Last modified 2022-04-13 00:00:04
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+# Load=0/32=0%, Rehash=0, Collisions=0/7=0%
 #  commands to execute (from `Makefile', line 35):
 	@echo "$(GREEN)Compiling:$(NORMAL)"
 	$(ARCH) $(CC) $(MLX) $(LIBFT) $(OBJ) $< -o $(NAME)
 	
 
-# Not a target:
-srcs/frac_color.c:
+obj/frac_color.o: src/frac_color.c includes/fractol.h
 #  Implicit rule search has been done.
-#  Last modified 2022-04-10 21:10:37
+#  Implicit/static pattern stem: `frac_color'
+#  Last modified 2022-04-13 00:00:04
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := obj/frac_color.o
+# automatic
+# % := 
+# automatic
+# * := frac_color
+# automatic
+# + := src/frac_color.c includes/fractol.h
+# automatic
+# | := 
+# automatic
+# < := src/frac_color.c
+# automatic
+# ^ := src/frac_color.c includes/fractol.h
+# automatic
+# ? := src/frac_color.c
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=3/17=18%
+#  commands to execute (from `Makefile', line 39):
+	@mkdir -p $(OBJ_DIR)
+	@echo "$(GREEN)Compiling:$(NORMAL)"
+	$(ARCH) $(CC) -c $< -o $@ 			
+	
+
+obj/julia.o: src/julia.c includes/fractol.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `julia'
+#  Last modified 2022-04-12 23:59:06
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 39):
+	@mkdir -p $(OBJ_DIR)
+	@echo "$(GREEN)Compiling:$(NORMAL)"
+ 
+	$(ARCH) $(CC) -c $< -o $@ 			
+	
 
 # Not a target:
-srcs/julia.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-04-11 14:37:15
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
-srcs/frac_scale.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-04-10 21:31:55
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+obj/frac_scale.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 all: fractol
 #  Phony target (prerequisite of .PHONY).
 #  Command-line target.
 #  Implicit rule search has not been done.
 #  File does not exist.
- 
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+# Load=0/32=0%, Rehash=0, Collisions=0/7=0%
 
 .PHONY: all clean fclean re
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-srcs/mandelbrot.c:
+obj/mandelbrot.o: src/mandelbrot.c includes/fractol.h
 #  Implicit rule search has been done.
-#  Last modified 2022-04-10 21:11:26
+#  Implicit/static pattern stem: `mandelbrot'
+#  Last modified 2022-04-12 23:59:06
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
-srcs/burningship.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-04-11 10:43:25
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 39):
+	@mkdir -p $(OBJ_DIR)
+	@echo "$(GREEN)Compiling:$(NORMAL)"
+	$(ARCH) $(CC) -c $< -o $@ 			
+	
 
 pig:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 62):
+#  commands to execute (from `Makefile', line 63):
 	@echo "                    *                                             .                       \n\
 	\n\
 	°oO#@@@@@@@@#*   ..°°°°°°.  *@@@@@@@@@#O*.                         \n\
@@ -356,10 +376,52 @@ pig:
 	pipex compile completed"
 	
 
-objs/fractol.o: srcs/fractol.c includes/fractol.h
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-12 23:30:10
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+src/frac_color.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-13 00:00:37
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+src/julia.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-12 23:50:41
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+src/mandelbrot.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-04-12 22:47:20
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+obj/fractol.o: src/fractol.c includes/fractol.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `fractol'
-#  Last modified 2022-04-12 14:12:57
+#  Last modified 2022-04-12 23:59:06
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -371,33 +433,9 @@ objs/fractol.o: srcs/fractol.c includes/fractol.h
 	
 
 # Not a target:
-.SUFFIXES:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-Makefile:
-#  Implicit rule search has been done.
-#  Last modified 2022-04-11 12:19:02
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
-srcs/fractol.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-04-12 14:10:54
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
 includes/fractol.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-04-12 14:12:55
+#  Last modified 2022-04-12 23:32:15
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -405,7 +443,7 @@ includes/fractol.h:
 
 libft/libft.a:
 #  Implicit rule search has not been done.
-#  Last modified 2022-04-12 14:11:22
+#  Last modified 2022-04-12 23:59:06
 #  File has been updated.
 #  Successfully updated.
 #  commands to execute (from `Makefile', line 44):
@@ -420,37 +458,10 @@ fclean: clean
 #  commands to execute (from `Makefile', line 54):
 	@make -C $(LIBFT_PATH) fclean
 	@$(RM) -rf $(NAME) $(OBJ) $(OBJ_DIR)
+	@make pig
 	
 
-objs/burningship.o: srcs/burningship.c includes/fractol.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `burningship'
-#  Last modified 2022-04-12 14:12:57
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 39):
-	@mkdir -p $(OBJ_DIR)
-	@echo "$(GREEN)Compiling:$(NORMAL)"
-	$(ARCH) $(CC) -c $< -o $@ 			
-	
-
-objs/frac_plot.o: srcs/frac_plot.c includes/fractol.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `frac_plot'
-#  Last modified 2022-04-12 14:12:57
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 39):
-	@mkdir -p $(OBJ_DIR)
-	@echo "$(GREEN)Compiling:$(NORMAL)"
-	$(ARCH) $(CC) -c $< -o $@ 			
-	
-
-leaks: libft/libft.a objs/frac_plot.o objs/fractol.o objs/mandelbrot.o objs/julia.o objs/burningship.o objs/frac_hook1.o objs/frac_color.o objs/frac_scale.o objs/frac_exit.o
+leaks: libft/libft.a obj/frac_plot.o obj/fractol.o obj/mandelbrot.o obj/julia.o obj/burningship.o obj/frac_hook.o obj/frac_color.o obj/frac_scale.o obj/frac_exit.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -459,10 +470,30 @@ leaks: libft/libft.a objs/frac_plot.o objs/fractol.o objs/mandelbrot.o objs/juli
 	$(ARCH) $(CC) $(LEAKS) $(MLX) $(LIBFT) $(OBJ) $< -o $(NAME)
 	
 
-objs/frac_exit.o: srcs/frac_exit.c includes/fractol.h
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+obj/frac_hook.o: src/frac_hook.c includes/fractol.h
 #  Implicit rule search has been done.
-#  Implicit/static pattern stem: `frac_exit'
-#  Last modified 2022-04-12 14:12:58
+#  Implicit/static pattern stem: `frac_hook'
+#  Last modified 2022-04-12 23:59:07
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 39):
+	@mkdir -p $(OBJ_DIR)
+	@echo "$(GREEN)Compiling:$(NORMAL)"
+	$(ARCH) $(CC) -c $< -o $@ 			
+	
+
+obj/burningship.o: src/burningship.c includes/fractol.h
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: `burningship'
+#  Last modified 2022-04-12 23:59:07
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -474,25 +505,14 @@ objs/frac_exit.o: srcs/frac_exit.c includes/fractol.h
 	
 
 # Not a target:
-.DEFAULT:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-objs/frac_hook1.o: srcs/frac_hook1.c includes/fractol.h
+src/fractol.c:
 #  Implicit rule search has been done.
-#  Implicit/static pattern stem: `frac_hook1'
-#  Last modified 2022-04-12 14:12:57
+ 
+#  Last modified 2022-04-12 23:31:08
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 39):
-	@mkdir -p $(OBJ_DIR)
-	@echo "$(GREEN)Compiling:$(NORMAL)"
- 
-	$(ARCH) $(CC) -c $< -o $@ 			
-	
 
 re: fclean all
 #  Phony target (prerequisite of .PHONY).
@@ -510,91 +530,55 @@ clean:
 	@$(RM) $(NAME)
 	
 
-# Not a target:
-srcs/frac_plot.c:
+obj/frac_plot.o: src/frac_plot.c includes/fractol.h
 #  Implicit rule search has been done.
-#  Last modified 2022-04-11 14:20:39
+#  Implicit/static pattern stem: `frac_plot'
+#  Last modified 2022-04-12 23:59:06
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
-srcs/frac_exit.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-04-10 21:10:22
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+#  commands to execute (from `Makefile', line 39):
+	@mkdir -p $(OBJ_DIR)
+	@echo "$(GREEN)Compiling:$(NORMAL)"
+	$(ARCH) $(CC) -c $< -o $@ 			
+	
 
 # Not a target:
-srcs/frac_hook1.c:
+obj/frac_exit.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/frac_hook.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-04-12 14:12:26
+#  Last modified 2022-04-12 23:30:46
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
-objs/frac_color.o: srcs/frac_color.c includes/fractol.h
+# Not a target:
+src/burningship.c:
 #  Implicit rule search has been done.
-#  Implicit/static pattern stem: `frac_color'
-#  Last modified 2022-04-12 14:12:57
+#  Last modified 2022-04-12 22:48:46
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 39):
-	@mkdir -p $(OBJ_DIR)
-	@echo "$(GREEN)Compiling:$(NORMAL)"
-	$(ARCH) $(CC) -c $< -o $@ 			
-	
 
-objs/julia.o: srcs/julia.c includes/fractol.h
+# Not a target:
+src/frac_plot.c:
 #  Implicit rule search has been done.
-#  Implicit/static pattern stem: `julia'
-#  Last modified 2022-04-12 14:12:57
+#  Last modified 2022-04-12 23:18:49
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 39):
-	@mkdir -p $(OBJ_DIR)
-	@echo "$(GREEN)Compiling:$(NORMAL)"
-	$(ARCH) $(CC) -c $< -o $@ 			
-	
-
-objs/frac_scale.o: srcs/frac_scale.c includes/fractol.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `frac_scale'
-#  Last modified 2022-04-12 14:12:58
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 39):
-	@mkdir -p $(OBJ_DIR)
-	@echo "$(GREEN)Compiling:$(NORMAL)"
-	$(ARCH) $(CC) -c $< -o $@ 			
-	
-
-objs/mandelbrot.o: srcs/mandelbrot.c includes/fractol.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `mandelbrot'
-#  Last modified 2022-04-12 14:12:57
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 39):
-	@mkdir -p $(OBJ_DIR)
-	@echo "$(GREEN)Compiling:$(NORMAL)"
-	$(ARCH) $(CC) -c $< -o $@ 			
-	
 
 # files hash-table stats:
-# Load=31/1024=3%, Rehash=0, Collisions=3/117=3%
+# Load=29/1024=3%, Rehash=0, Collisions=0/105=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -606,6 +590,6 @@ objs/mandelbrot.o: srcs/mandelbrot.c includes/fractol.h
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Tue Apr 12 20:32:38 2022
+# Finished Make data base on Wed Apr 13 10:49:00 2022
 
  

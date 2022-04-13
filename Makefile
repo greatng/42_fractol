@@ -1,21 +1,21 @@
 NAME			=	fractol
 LEAKS			=	-fsanitize=address -fno-omit-frame-pointer
 CC			=	gcc
-CFLAGS			=	-Wall -Wextra -Werror
+CFLAGS			=	-Wall -Wextra -Werrorgit 
 RM			=	rm -rf
 
-HEADER_DIR		=	includes/
+HEADER_DIR		=	includes
 HEADER			=	fractol
-HEADERS			=	$(addprefix $(HEADER_DIR), $(addsuffix .h, $(HEADER)))
+HEADERS			=	$(addprefix $(HEADER_DIR)/, $(addsuffix .h, $(HEADER)))
 
-SRC_DIR			=	srcs/
-SRC			=	frac_plot fractol mandelbrot julia burningship frac_hook1 \
+SRC_DIR			=	src
+SRC			=	frac_plot fractol mandelbrot julia burningship frac_hook \
 					frac_color frac_scale frac_exit
 
-SRCS 			=	$(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC)))
+SRCS 			=	$(addprefix $(SRC_DIR)/, $(addsuffix .c, $(SRC)))
 
-OBJ_DIR			=	objs/
-OBJ			=	$(addprefix $(OBJ_DIR), $(addsuffix .o, $(SRC)))
+OBJ_DIR			=	obj
+OBJ			=	$(addprefix $(OBJ_DIR)/, $(addsuffix .o, $(SRC)))
 
 ARCH			=	arch -x86_64
 MLX			=	-Lmlx -lmlx -framework OpenGL -framework Appkit
@@ -33,9 +33,9 @@ all:				$(NAME)
 
 $(NAME):			$(LIBFT) $(OBJ)
 					@echo "$(GREEN)Compiling:$(NORMAL)"
-					$(ARCH) $(CC) $(MLX) $(LIBFT) $(OBJ) $< -o $(NAME)
+					$(ARCH) $(CC) $(CFLAGS) $(MLX) $(LIBFT) $(OBJ) $< -o $(NAME)
 
-$(OBJ_DIR)%.o:			$(SRC_DIR)%.c $(HEADERS)
+$(OBJ_DIR)/%.o:			$(SRC_DIR)/%.c $(HEADERS)
 					@mkdir -p $(OBJ_DIR)
 					@echo "$(GREEN)Compiling:$(NORMAL)"
 					$(ARCH) $(CC) -c $< -o $@ 			

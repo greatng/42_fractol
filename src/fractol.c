@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 23:53:04 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/12 22:46:24 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/13 22:45:47 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ static t_fract	fractol_init(void)
 	if (!m.buffer)
 		exit(1);
 	m.zoom = SCALE;
-	m.x_o = WIDTH / 2;
-	m.y_o = HEIGHT / 2;
+	m.o.x = WIDTH / 2;
+	m.o.y = HEIGHT / 2;
 	m.color = 0;
 	m.off.x = 0;
 	m.off.y = 0;
