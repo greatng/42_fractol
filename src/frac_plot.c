@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 12:50:48 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/13 17:32:44 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/13 23:17:29 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	put_str_mlx(t_fract m, char *str)
 		 exit, scroll wheel: zoom");
 	mlx_string_put(m.mlx, m.win, 10, HEIGHT - 20, white, "left mouse: \
 		move to position, right mouse: zoom");
-	mlx_string_put(m.mlx, m.win, 10, HEIGHT - 10, white,\
+	mlx_string_put(m.mlx, m.win, 10, HEIGHT - 10, white, \
 		"z: zoom in, x: zoom out, \
 		arrow: move, space: reset");
 }

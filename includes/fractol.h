@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 23:57:36 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/13 22:05:06 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/13 23:21:20 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,7 @@ int		mousehook(int mousecode, int x, int y, t_fract *m);
 int		frac_shape_color(t_fract m, double x, double y, int type);
 int		close_win(t_fract *m);
 int		main_loop(t_fract *m);
-void		mousemove(t_fract *m, int x, int y);
+void	mousemove(t_fract *m, int x, int y);
 double	x_scale(t_fract *m, int x);
 double	y_scale(t_fract *m, int y);
 void	zoom(t_fract *m, char key);
