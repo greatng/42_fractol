@@ -1,7 +1,7 @@
 NAME			=	fractol
 LEAKS			=	-fsanitize=address -fno-omit-frame-pointer
 CC			=	gcc
-CFLAGS			=	-Wall -Wextra -Werrorgit 
+CFLAGS			=	-Wall -Wextra -Werror
 RM			=	rm -rf
 
 HEADER_DIR		=	includes

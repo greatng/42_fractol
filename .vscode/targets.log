@@ -8,7 +8,8 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Wed Apr 13 23:11:53 2022
+ 
+# Make data base, printed on Mon Apr 18 13:17:32 2022
 
 # Variables
 
@@ -19,7 +20,6 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # makefile (from `Makefile', line 18)
 OBJ = $(addprefix $(OBJ_DIR)/, $(addsuffix .o, $(SRC)))
 # makefile (from `Makefile', line 12)
- 
 SRC = frac_plot fractol mandelbrot julia burningship frac_hook frac_color frac_scale frac_exit
 # environment
 VSCODE_LOG_NATIVE = false
@@ -42,7 +42,7 @@ MLX = -Lmlx -lmlx -framework OpenGL -framework Appkit
 # environment
 _ = /usr/bin/make
 # makefile (from `Makefile', line 4)
-CFLAGS = -Wall -Wextra -Werrorgit 
+CFLAGS = -Wall -Wextra -Werror
 # makefile (from `Makefile', line 29)
 BLUE = \033[38;5;4m
 # makefile (from `Makefile', line 1)
@@ -58,7 +58,7 @@ __CFBundleIdentifier = com.microsoft.VSCode
 # environment
 INFOPATH = /opt/homebrew/share/info:
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/ld/sh1sblf11kd9n_lxmzlt97lm0000gn/T/vscode-ipc-da2292d1-202b-4651-a9c7-35af756ad082.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/ld/sh1sblf11kd9n_lxmzlt97lm0000gn/T/vscode-ipc-d0966d74-9089-41c8-a7e1-95ec8e97c706.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -66,7 +66,7 @@ PATH = /Users/greatng/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/sbin:/
 # environment
 LSCOLORS = ExGxDxDxCxDxDxFxFxexEx
 # environment
-LaunchInstanceID = 62EB7137-4D67-47A2-86E9-2136EEBE673F
+LaunchInstanceID = 04A347C3-2359-4FA1-8F86-305A60923492
 # environment
 VSCODE_LOG_STACK = false
 # environment
@@ -78,11 +78,11 @@ TERMINFO = /Users/greatng/.terminfo
 # environment
 LS_COLORS = fi=00:mi=00:mh=00:ln=01;36:or=01;31:di=01;34:ow=04;01;34:st=34:tw=04;34:pi=01;33:so=01;33:do=01;33:bd=01;33:cd=01;33:su=01;35:sg=01;35:ca=01;35:ex=01;32
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.QWnWmciL90/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.0de8Yae9oe/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
-DISPLAY = /private/tmp/com.apple.launchd.8AF0cNGdij/org.xquartz:0
+DISPLAY = /private/tmp/com.apple.launchd.bpUsTNHR21/org.xquartz:0
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -102,7 +102,7 @@ HOME = /Users/greatng
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/greatng/Library/Application Support/Code/CachedData/8dfae7a5cd50421d10cd99cb873990460525a898
+VSCODE_CODE_CACHE_PATH = /Users/greatng/Library/Application Support/Code/CachedData/dfd34e8260c270da74b5c2d86d61aee4b6d56977
 # environment
 LOGNAME = greatng
 # environment
@@ -152,7 +152,7 @@ TMPDIR = /var/folders/ld/sh1sblf11kd9n_lxmzlt97lm0000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/greatng/Library/Application Support/Code/1.66.1-main.sock
+VSCODE_IPC_HOOK = /Users/greatng/Library/Application Support/Code/1.66.2-main.sock
 # makefile (from `Makefile', line 28)
 RED = \033[38;5;1m
 # makefile (from `Makefile', line 20)
@@ -164,7 +164,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.7754801.7754807
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.8567989.8567995
 # environment
 HOMEBREW_PREFIX = /opt/homebrew
 # automatic
@@ -179,6 +179,7 @@ __CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x0
 COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
+ 
 # makefile (from `Makefile', line 11)
 SRC_DIR = src
 # automatic
@@ -208,9 +209,8 @@ LANG = C
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 422
+VSCODE_PID = 463
 # variable set hash-table stats:
- 
 # Load=98/1024=10%, Rehash=0, Collisions=7/140=5%
 
 # Pattern-specific Variable Values
@@ -219,9 +219,9 @@ VSCODE_PID = 422
 
 # Directories
 
-# . (device 16777234, inode 7338726): 12 files, no impossibilities.
-# includes (device 16777234, inode 7339005): 3 files, no impossibilities so far.
-# src (device 16777234, inode 7339035): 11 files, no impossibilities so far.
+# . (device 16777230, inode 7338726): 12 files, no impossibilities.
+# includes (device 16777230, inode 7339005): 3 files, no impossibilities so far.
+# src (device 16777230, inode 7339035): 11 files, no impossibilities so far.
 
 # 26 files, no impossibilities in 3 directories.
 
@@ -240,7 +240,7 @@ obj/%.o: src/%.c includes/fractol.h
 
 fractol: libft/libft.a obj/frac_plot.o obj/fractol.o obj/mandelbrot.o obj/julia.o obj/burningship.o obj/frac_hook.o obj/frac_color.o obj/frac_scale.o obj/frac_exit.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-04-13 23:10:13
+#  Last modified 2022-04-18 13:10:56
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -253,7 +253,7 @@ fractol: libft/libft.a obj/frac_plot.o obj/fractol.o obj/mandelbrot.o obj/julia.
 obj/frac_color.o: src/frac_color.c includes/fractol.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `frac_color'
-#  Last modified 2022-04-13 23:10:13
+#  Last modified 2022-04-18 12:49:17
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -267,7 +267,7 @@ obj/frac_color.o: src/frac_color.c includes/fractol.h
 obj/julia.o: src/julia.c includes/fractol.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `julia'
-#  Last modified 2022-04-13 23:10:13
+#  Last modified 2022-04-18 12:49:17
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -281,7 +281,7 @@ obj/julia.o: src/julia.c includes/fractol.h
 obj/frac_scale.o: src/frac_scale.c includes/fractol.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `frac_scale'
-#  Last modified 2022-04-13 23:10:13
+#  Last modified 2022-04-18 13:10:55
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -310,7 +310,7 @@ all: fractol
 obj/mandelbrot.o: src/mandelbrot.c includes/fractol.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `mandelbrot'
-#  Last modified 2022-04-13 23:10:13
+#  Last modified 2022-04-18 13:10:55
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -378,7 +378,7 @@ pig:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-04-13 23:08:55
+#  Last modified 2022-04-18 13:11:37
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -400,12 +400,13 @@ src/julia.c:
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
+ 
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
 src/frac_scale.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-04-13 23:03:43
+#  Last modified 2022-04-18 13:10:51
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -414,7 +415,7 @@ src/frac_scale.c:
 # Not a target:
 src/mandelbrot.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-04-13 21:58:54
+#  Last modified 2022-04-18 12:54:27
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -423,8 +424,7 @@ src/mandelbrot.c:
 obj/fractol.o: src/fractol.c includes/fractol.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `fractol'
-#  Last modified 2022-04-13 23:10:13
- 
+#  Last modified 2022-04-18 12:49:17
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -438,7 +438,7 @@ obj/fractol.o: src/fractol.c includes/fractol.h
 # Not a target:
 includes/fractol.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-04-13 22:05:06
+#  Last modified 2022-04-13 23:21:20
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -446,7 +446,7 @@ includes/fractol.h:
 
 libft/libft.a:
 #  Implicit rule search has not been done.
-#  Last modified 2022-04-13 23:10:13
+#  Last modified 2022-04-18 12:49:17
 #  File has been updated.
 #  Successfully updated.
 #  commands to execute (from `Makefile', line 44):
@@ -482,7 +482,7 @@ leaks: libft/libft.a obj/frac_plot.o obj/fractol.o obj/mandelbrot.o obj/julia.o 
 obj/frac_hook.o: src/frac_hook.c includes/fractol.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `frac_hook'
-#  Last modified 2022-04-13 23:10:13
+#  Last modified 2022-04-18 12:49:17
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -496,7 +496,7 @@ obj/frac_hook.o: src/frac_hook.c includes/fractol.h
 obj/burningship.o: src/burningship.c includes/fractol.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `burningship'
-#  Last modified 2022-04-13 23:10:13
+#  Last modified 2022-04-18 13:10:55
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -535,7 +535,7 @@ clean:
 obj/frac_plot.o: src/frac_plot.c includes/fractol.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `frac_plot'
-#  Last modified 2022-04-13 23:10:13
+#  Last modified 2022-04-18 12:49:17
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -549,7 +549,7 @@ obj/frac_plot.o: src/frac_plot.c includes/fractol.h
 obj/frac_exit.o: src/frac_exit.c includes/fractol.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `frac_exit'
-#  Last modified 2022-04-13 23:10:13
+#  Last modified 2022-04-18 12:49:17
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -572,7 +572,7 @@ src/frac_hook.c:
 # Not a target:
 src/burningship.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-04-13 17:21:47
+#  Last modified 2022-04-18 12:51:44
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -581,7 +581,7 @@ src/burningship.c:
 # Not a target:
 src/frac_plot.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-04-13 17:32:44
+#  Last modified 2022-04-18 12:45:46
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -609,6 +609,6 @@ src/frac_exit.c:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Wed Apr 13 23:11:53 2022
+# Finished Make data base on Mon Apr 18 13:17:32 2022
 
  

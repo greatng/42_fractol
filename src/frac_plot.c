@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 12:50:48 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/13 23:17:29 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/18 12:45:46 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ void	frac_plot(t_fract m)
 		x = 0;
 		while (x <= WIDTH)
 		{
-			if (x % (WIDTH / 20) == 0
-				|| y % (HEIGHT / 20) == 0)
-				m.p_color = 0x101010;
+			if (x % (WIDTH / 2) == 0
+				|| y % (HEIGHT / 2) == 0)
+				m.p_color = 0x404040;
 			else
 				m.p_color = frac_shape_color(m, x, y, m.type);
 			pixel = (y * m.win_mem.lineb) + (x * 4);

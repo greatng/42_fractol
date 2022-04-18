@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/05 12:54:03 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/13 23:03:43 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/18 13:10:51 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 void	move(t_fract *m, char key)
 {
 	if (key == 'l')
-		m->off.x += 25;
+		m->o.x += 25;
 	else if (key == 'r')
-		m->off.x -= 25;
+		m->o.x -= 25;
 	else if (key == 'u')
-		m->off.y += 25;
+		m->o.y += 25;
 	else if (key == 'd')
-		m->off.y -= 25;
+		m->o.y -= 25;
 }
 
 void	zoom(t_fract *m, char key)

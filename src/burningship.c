@@ -6,7 +6,7 @@
 /*   By: pngamcha <pngamcha@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 10:43:01 by pngamcha          #+#    #+#             */
-/*   Updated: 2022/04/13 17:21:47 by pngamcha         ###   ########.fr       */
+/*   Updated: 2022/04/18 12:51:44 by pngamcha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	burningship(t_fract m, double x, double y)
 	y = y0;
 	x2 = pow(x, 2);
 	y2 = pow(y, 2);
-	while (x2 + y2 < 4 && ++i < 64)
+	while (x2 + y2 < 4 && ++i < 256)
 	{
 		y = fabs(2 * y * x) + y0;
 		x = x2 - y2 + x0;
