@@ -8,7 +8,7 @@ Create fractol image and display on windows by using minilibx library.
 
 When using zoom and then move position, if you zoom again it won't zoom on the center.
 
-There are 3 set of fractol
+**There are 3 set of fractol**
 
 1. Mandelbrot
 2. Julia [set 1-6]
